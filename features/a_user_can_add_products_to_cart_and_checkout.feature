@@ -5,7 +5,7 @@ Feature: Checkout Products
     I would like to be presented with a checkout page
 
 Background: 
-     Given the following products exists
+    Given the following products exists
         | name         | description    | price |
         | Pizza1       | Cheesy         |   5   |
         | Pizza2       | Spicy          |   30  |
