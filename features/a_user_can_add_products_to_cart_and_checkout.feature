@@ -1,4 +1,3 @@
-@javascript
 Feature: Checkout Products
     As a user
     When I want to place an order
