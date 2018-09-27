@@ -15,4 +15,4 @@ Feature: Login
        And I fill in "Email" with "miriam@work.com"
        And I fill in "Password" with "miriampass"
        And I click "Login"
-       Then I should see message "Signed in successfully!"
+       Then I should see message "Signed in successfully."
