@@ -5,7 +5,7 @@ Feature: Login
 
    Background:
        Given I visit the landing page
-       And I click "Login"
+       And I click "Login" button
        And the following user exists
            | email             | password    |
            | miriam@work.com   | miriampass  |
@@ -14,5 +14,5 @@ Feature: Login
        Then I should be on the login page
        And I fill in "Email" with "miriam@work.com"
        And I fill in "Password" with "miriampass"
-       And I click "Login"
+       And I click "Login" button
        Then I should see message "Signed in successfully."
