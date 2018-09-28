@@ -11,7 +11,7 @@ Feature: Login
            | miriam@work.com   | miriampass  |
            
     Scenario: A user can log in
-       Then I should be on the login page
+       Then I should be on login page
        And I fill in "Email" with "miriam@work.com"
        And I fill in "Password" with "miriampass"
        And I click "Login" button

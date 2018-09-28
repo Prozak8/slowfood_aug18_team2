@@ -16,9 +16,11 @@ end
 Then("I should be on product page") do
   visit products_path
 end
+
  Then("I should be on login page") do
   visit new_user_session_path
 end
+
  Then("I should be on signup page") do
   visit new_user_registration_path
 end 
