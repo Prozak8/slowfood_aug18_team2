@@ -14,5 +14,5 @@ Feature: Login
        Then I should be on login page
        And I fill in "Email" with "miriam@work.com"
        And I fill in "Password" with "miriampass"
-       And I click "Login" button
+       And I click "Log in" button
        Then I should see message "Signed in successfully."
