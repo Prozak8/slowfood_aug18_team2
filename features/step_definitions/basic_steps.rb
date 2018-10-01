@@ -43,8 +43,6 @@ Given("I am logged in as {string}") do |user_name|
   login_as @user
 end
 
-
-
-
-
-
+When("I click {string} button") do |link_name|
+  click_on link_name
+end

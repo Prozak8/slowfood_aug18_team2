@@ -19,13 +19,8 @@ Background:
         | Robin        | robin@example.com      |
     And I am logged in as "Robin"
     And I visit the product page
-    
-   
+       
 Scenario: A user can add products to cart 
     When I click "Add to cart" button on "Pizza1" product
     And I click "Add to cart" button on "Pizza2" product
     Then I should see "2 items"
-       
-
-
-

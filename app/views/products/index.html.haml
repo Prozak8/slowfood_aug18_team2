@@ -1,10 +1,28 @@
+= render 'partials/navbar' 
 %section.container
   %h1 Food store
   %div.wrapper
+
+  %div.wrapper
+    %button.tabs{:onclick => "openDiv('starters')"} Starters
+    %button.tabs{:onclick => "openDiv('maincourse')"} Main Course
+    %button.tabs{:onclick => "openDiv('desserts')"} Desserts
+    %button.tabs{:onclick => "openDiv('sides')"} Side Orders and Drinks
+  
     - @products.each do |product|
       %div.food-tile{id: dom_id(product)}
         %p= product.name
         %p= product.description
         %p= number_to_currency(product.price, unit: "kr", format: "%n %u")
-        %p= add_to_cart(product)        
+        %p= add_to_cart(product)   
+
+    #starter.tab-categories{:style => "display:block"}     
     
+    #maincourse.tab-categories
+      %p here all main
+
+    #desserts.tab-categories
+      %p here all desserts
+
+    #sides.tab-categories
+      %p here all sides

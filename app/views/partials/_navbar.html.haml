@@ -1,7 +1,10 @@
-.navbar   
+.navbar
     %ul
+        = link_to "Home", root_path
+        = link_to "Products", products_path
         %li
             = shop_icon_quantity
-            = link_to(image_tag('cart.png'), "https://www.w3schools.com/css/css_link.asp")
-            %a{href: "#"} Login
-            %a{href: "#"} Signup
+            = link_to "Cart", cartify.cart_path
+            = link_to "Login", new_user_session_path
+            = link_to "Signup", new_user_registration_path
+            = link_to "Logout", destroy_user_session_path, method: :delete
