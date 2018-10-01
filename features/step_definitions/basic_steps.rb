@@ -20,15 +20,10 @@ Given("I visit the product page") do
   visit products_path
 end
 
-Then("stop") do
-  binding.pry
-end
-
-When("I click {string} button on {string} product") do |link_name, product_name|
-  product = Product.find_by(name: product_name)
-  within("#product_#{product.id}") do 
-    click_on link_name
-  end  
+Given("the following user exists") do |table|
+  table.hashes.each do |user|
+    FactoryBot.create(:user, user)
+  end
 end
 
 Given("the following users exist") do |table|

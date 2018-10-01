@@ -25,21 +25,27 @@ Then("I should be on cart page") do
   expect(current_path).to eq cartify.cart_path
 end
 
-Given("the following user exists") do |table|
-  table.hashes.each do |user|
-    FactoryBot.create(:user, user)
-  end
-end
 
 Then("I fill in {string} with {string}") do |field, name|
   fill_in field, with: name
+end
+
+Then("I should see message {string}") do |message|
+  expect(page).to have_content message
 end
 
 When("I click {string} button") do |link_name|
   click_on link_name
 end
 
-Then("I should see message {string}") do |message|
-  expect(page).to have_content message
+When("I click {string} button on {string} product") do |link_name, product_name|
+  product = Product.find_by(name: product_name)
+  within("#product_#{product.id}") do 
+    click_on link_name
+  end  
+end
+
+Then("stop") do
+  binding.pry
 end
 
